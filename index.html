@@ -1,3 +1,25 @@
-<h1>This is testing</h1>
-		<h3>I am New Programmer</h3>
-		<h5>Nice to Meet You</h5>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+</head>
+<body ng-app="ToDoList">
+	<div ng-controller="MainController">
+		<!--<li>{{ list[0] }}</li>
+		<li>{{ list[1] }}</li>
+		<li>{{ list[2] }}</li>!-->
+		
+		<singlelist mylist="todo"></singlelist>
+		<input ng-model="addToDo">
+		<button ng-click="addItem(todo.list, addToDo)">Add more about myself</button>
+
+		<singlelist mylist="book"></singlelist>
+		<input ng-model="addToDo">
+		<button ng-click="addItem(book.list, addBook)">Add This Book</button>
+	</div>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controller/MainController.js"></script>
+	<script type="text/javascript" src="js/directives/singlelist.js"></script>
+</body>
+</html>
